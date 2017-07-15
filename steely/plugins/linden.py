@@ -297,7 +297,7 @@ def gamble_cmd(bot, message_parts, author_id, thread_id, thread_type):
             thread_id=thread_id, thread_type=thread_type)
         return
     guess, number = int(message_parts[0]), random.randint(1, 3)
-    if 1 > guess or guess > 3:
+    if 1 > guess > 3:
         bot.sendMessage("number between 1 and 3 please",
             thread_id=thread_id, thread_type=thread_type)
         return
